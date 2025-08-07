@@ -2,9 +2,9 @@ from flask import Flask, render_template, request
 import joblib
 
 app = Flask(__name__)
-model = joblib.load('farmer_model.lb')  # Make sure this file is in the same folder
+model = joblib.load('farmer_model.lb')
 
-history = []  # To store past predictions
+history = []
 
 @app.route('/')
 def home():
